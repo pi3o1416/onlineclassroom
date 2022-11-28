@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Third Party apps
+    'django_extensions',
+
     #Local Apps
     'authentication.apps.AuthenticationConfig',
 ]
@@ -137,6 +141,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom Settings
 AUTH_USER_MODEL = 'authentication.CustomUser'
+
+
+# Shell Plus Settings
+import pygments.formatters
+SHELL_PLUS = "ipython"
+SHELL_PLUS_PRINT_SQL = True
+SHELL_PLUS_PYGMENTS_FORMATTER = pygments.formatters.TerminalFormatter
+SHELL_PLUS_PYGMENTS_FORMATTER_KWARGS = {}
+
+
 
 
 
