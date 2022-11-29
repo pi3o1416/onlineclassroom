@@ -22,6 +22,10 @@ class CustomUser(AbstractUser):
         default=UserRoles.LEARNER
     )
     user_manager = CustomUserQuerySet.as_manager()
+
+    class Meta:
+        default_manager_name = 'objects'
+
     @property
     def full_name(self):
         return '{} {}'.format(self.first_name, self.last_name)
